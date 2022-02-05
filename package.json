@@ -1,4 +1,8 @@
 {
+  "version": "1.0.0",
+  "description": "workshop 2 lazy loading",
+  "main": "/src/index.js",
+  "homepage": " https://yessygc.github.io/workshop-2-lazy/",
   "scripts": {
     "start": "snowpack dev",
     "build": "snowpack build",
