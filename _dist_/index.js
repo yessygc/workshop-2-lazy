@@ -14,7 +14,7 @@ const createImageNode = () => {
     const imagen = document.createElement('img')
     imagen.className = "mx-auto";
     imagen.width = '320'
-    imagen.src = `https://source.unsplash.com/collection/${random()}881002`; //TODO
+    imagen.dataset.src = `https://source.unsplash.com/collection/${random()}881002`; //TODO
 
     container.appendChild(imagen);
 
