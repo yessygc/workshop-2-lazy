@@ -1,20 +1,21 @@
 
 const isIntersecting = (entry) => {
-    return entry.isIntersecting // true (dentro de la pantalla)
+    return entry.isIntersecting; // true (dentro de la pantalla)
 };
 
-const accion = (entry) => {
-    const nodo =  entry.target
-    console.log("holis");
+const loadImage = (entry) => {
+    const container =  entry.target; //contenedor
+    const imagen = container.firstChild;
+    const url = imagen.dataset.src;
+    // load imagen
+    imagen.src = url;
 
     // des registra la imagen (listener)
-    observer.unobserve(nodo);
+    observer.unobserve(container);
 };
 
 const observer = new IntersectionObserver((entries) => {
-    entries
-        .filter(isIntersecting)
-        .forEach(accion)
+    entries.filter(isIntersecting).forEach(loadImage);
 });
 
 //
